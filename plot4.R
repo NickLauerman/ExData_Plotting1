@@ -1,5 +1,5 @@
-# Plot 3
-# Time series of sub metering 
+# Plot 4
+#  
 # 
 library(lubridate)
 file = "household_power_consumption.txt"
@@ -26,13 +26,3 @@ lines(work$newDate, work$Sub_metering_2,
       col = "red")
 lines(work$newDate, work$Sub_metering_3,
       col = "blue")
-#lty = 1
-legend("topright", 
-       lty = 1, 
-       col=c("black","red","blue"),
-       legend = c("Sub_metering_1",
-                  "Sub_metering_2",
-                  "Sub_metering_1")
-       )
-
-
