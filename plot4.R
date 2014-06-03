@@ -14,7 +14,11 @@ data$Date <- as.Date (data$Date, "%d/%m/%Y")
 work <- subset(data, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 
-#wrap in code to produce the png
+png(filename = "plot4.png",
+    units = "px",
+    width = 480,
+    height = 480)
+
 par(mfcol=c(2,2))
 
 plot(work$datetime, work$Global_active_power, 
@@ -55,5 +59,6 @@ with(work,
 
 
 par(mfrow=c(1,1))
+dev.off()
 
 
