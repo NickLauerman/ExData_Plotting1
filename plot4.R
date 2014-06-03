@@ -18,9 +18,8 @@ data <- read.table(unz(zip, file),
 data$datetime  <-  as.POSIXct(paste(data$Date, data$Time), 
                               format = "%d/%m/%Y %H:%M:%S")
 
-work <- subset(data, (as.Date(datetime) >= "2007-02-01" &
-                          as.Date(datetime) <= "2007-02-02"))
-
+work <- subset(data, (datetime >= as.POSIXct("2007-02-01 00:00:00") &
+                          datetime < as.POSIXct("2007-02-03 00:00:00")))
 
 png(filename = "plot4.png",
     units = "px",
@@ -33,8 +32,6 @@ plot(work$datetime, work$Global_active_power,
      type = "l",
      ylab = "Global Active Power (kilowatts)",
      xlab = "")
-
-
 
 plot(work$datetime, work$Sub_metering_1, 
      type = "n",
@@ -52,18 +49,15 @@ legend("topright",
        legend = c("Sub_metering_1",
                   "Sub_metering_2",
                   "Sub_metering_1"),
-       bty = "n"
-)
+       bty = "n")
 
 with(work, 
      plot(datetime, Voltage, 
-          type = "l")
-)
+          type = "l"))
 
 with(work, 
      plot(datetime, Global_reactive_power, 
-          type = "l")
-)
+          type = "l"))
 
 
 par(mfrow=c(1,1))

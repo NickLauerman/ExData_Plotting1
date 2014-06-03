@@ -18,8 +18,8 @@ data <- read.table(unz(zip, file),
 data$datetime  <-  as.POSIXct(paste(data$Date, data$Time), 
                               format = "%d/%m/%Y %H:%M:%S")
 
-work <- subset(data, (as.Date(datetime) >= "2007-02-01" &
-                          as.Date(datetime) <= "2007-02-02"))
+work <- subset(data, (datetime >= as.POSIXct("2007-02-01 00:00:00") &
+                          datetime < as.POSIXct("2007-02-03 00:00:00")))
 
 
 png(filename = "plot3.png",
