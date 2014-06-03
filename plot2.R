@@ -18,4 +18,5 @@ work <- subset(data, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 plot(work$newDate, work$Global_active_power, 
      type = "l",
-     ylab = "Global Active Power (kilowatts)")
+     ylab = "Global Active Power (kilowatts)",
+     xlab = "")
