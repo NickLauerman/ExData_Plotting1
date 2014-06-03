@@ -6,7 +6,7 @@ Plotting Assignment 1 for Exploratory Data Analysis
 
 For Coursera course.
 
-THe orginal README.md from the forked repo has been retitled ***prompt.md*** and contains the details fo
+The orginal README.md from the forked repo has been retitled ***prompt.md*** and contains the details fo
 the assignemt.
 
 There are 4 R scripts files for this assignment:
