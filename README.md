@@ -23,6 +23,9 @@ download it from `https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehol
 Each script produces one graphics file in the PNG format with the same name but with 
 the **png** extension. For example when **plot1.R** was run in the above example,
 the script would have produced the **plot1.png** file same directory it is run from.
+The script produces a PG file with the brackground set to white to insure all veiwer will
+render the chart correct. This is a deviation for the example charts taht the plotswere developed to repoduce which
+have a background set to transparent.
 
 This repo has a figure directory which contains the graphics that are used in the 
 **prompt.md** (the orginal **README.md**) file.
