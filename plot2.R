@@ -34,6 +34,8 @@ work <- subset(data, (datetime >= as.POSIXct("2007-02-01 00:00:00") &
 
 # Create a graphics device. creating a png type image file with an image area
 # of 480 by 480 pixels.
+# The background by default is set to "WHITE" and is left in that state
+# verse the transparent of the example
 png(filename = "plot2.png",
     units = "px",
     width = 480,
